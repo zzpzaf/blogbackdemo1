@@ -23,7 +23,7 @@ public class PostsController {
     public ResponseEntity<List<Category>> getCategories() {
         List<Category> returnCategoriesList = new ArrayList<>();
         try {
-            returnCategoriesList = postsRepository.getCayegories();
+            returnCategoriesList = postsRepository.getCategories();
             if (returnCategoriesList.size() > 0) {
                 return new ResponseEntity<>(returnCategoriesList, HttpStatus.OK);
             } else {
@@ -83,7 +83,7 @@ public class PostsController {
     }
 
 
-    @GetMapping(value = "/articles" + "/id/{id}")
+    @GetMapping(value = "/articles" + "/articleId/{id}")
     public ResponseEntity<Article> getArticleById(@PathVariable int id) {
         Article article;
         article = postsRepository.getArticleById(id);

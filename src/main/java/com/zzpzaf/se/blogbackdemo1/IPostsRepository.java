@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface IPostsRepository {
 
-    List<Category> getCayegories();
+    List<Category> getCategories();
 
     Category getCategoryById(int id);
 

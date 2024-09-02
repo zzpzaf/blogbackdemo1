@@ -19,7 +19,7 @@ public class PostsRepository implements IPostsRepository {
     private JdbcTemplate jdbcTemplate;
 
     @Override
-    public List<Category> getCayegories() {
+    public List<Category> getCategories() {
         String sql = "SELECT * FROM testcategories";
         return jdbcTemplate.query(sql, BeanPropertyRowMapper.newInstance(Category.class));
     }
